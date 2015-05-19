@@ -7,8 +7,23 @@
  * If the input is invalid throw an 'Invalid Input' exception.
  */
 function checkData(inputString) {
-	// your code goes here
-}
+	if(typeof inputString !=='string'){
+
+		throw 'Invalid Input';
+	}
+
+
+	if(inputString.length===3){
+	return true;
+	}
+	else{
+	return false;
+	}
+
+}	
+
+	
+	checkData('abc');
 
 /*
  * PROBLEM `concatenateArrays`: (easy)
@@ -18,7 +33,22 @@ function checkData(inputString) {
  * If the input is invalid throw an 'Invalid Input' exception.
  */
 function concatenateArrays(a, b) {
-	// your code goes here
+
+	if (typeof a !=='object' || typeof b !=='object') {
+
+		throw 'Invalid Input';
+	}
+	
+	for(var i=0; i<b.length; i++){
+	    a.push(b[i]);
+		
+    	if(typeof a [i] !== 'number'){
+    		throw 'Invalid Input';
+    	}	
+	}
+	
+	return a;
+
 }
 
 /*
@@ -31,7 +61,9 @@ function concatenateArrays(a, b) {
  * If the input is invalid throw an 'Invalid Input' exception.
  */
 function fixProperNoun(noun) {
-	// your code goes here
+	noun[0] = noun[0].toUpperCase();
+
+	return noun;
 }
 
 /*
@@ -42,7 +74,13 @@ function fixProperNoun(noun) {
  * If the input is invalid throw an 'Invalid Input' exception.
  */
 function sortLetters(inputString) {
-	// your code goes here
+	if(typeof a [i] !== 'string'){
+		throw 'Invalid Input';
+	}
+
+    inputString.sort();
+    
+    return inputString;
 }
 
 /*
@@ -53,7 +91,14 @@ function sortLetters(inputString) {
  * If the input is invalid throw an 'Invalid Input' exception.
  */
 function absVal(integer) {
-	// your code goes here
+	if(typeof integer !== 'number'){
+		throw 'Invalid Input';
+	}
+
+    if(integer < 0)
+        integer = -integer;
+        
+    return integer;
 }
 
 /*
